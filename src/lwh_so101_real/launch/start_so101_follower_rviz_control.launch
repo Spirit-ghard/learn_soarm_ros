@@ -1,0 +1,20 @@
+<launch>
+  <arg name="port" default="/dev/ttyACM0"/>
+  <arg name="robot_id" default="my_awesome_follower_arm"/>
+  <arg name="calibration_dir" default="/home/a/.cache/huggingface/lerobot/calibration/robots/so101_follower"/>
+  <arg name="read_only" default="false"/>
+  <arg name="auto_enable" default="false"/>
+  <arg name="auto_port" default="false"/>
+  <arg name="allow_disconnected" default="true"/>
+  <include file="$(find lwh_so101_real)/launch/start_so101_follower_rviz.launch">
+    <arg name="port" value="$(arg port)"/>
+    <arg name="robot_id" value="$(arg robot_id)"/>
+    <arg name="calibration_dir" value="$(arg calibration_dir)"/>
+    <arg name="read_only" value="$(arg read_only)"/>
+    <arg name="auto_enable" value="$(arg auto_enable)"/>
+    <arg name="auto_port" value="$(arg auto_port)"/>
+    <arg name="allow_disconnected" value="$(arg allow_disconnected)"/>
+  </include>
+
+  <node name="so101_relative_control_gui" pkg="lwh_so101_real" type="so101_relative_control_gui.py" output="screen"/>
+</launch>

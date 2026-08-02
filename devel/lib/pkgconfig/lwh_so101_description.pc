@@ -1,0 +1,8 @@
+prefix=/home/a/lwh_code/soarm_ros/devel
+
+Name: lwh_so101_description
+Description: Description of lwh_so101_description
+Version: 0.0.1
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: 

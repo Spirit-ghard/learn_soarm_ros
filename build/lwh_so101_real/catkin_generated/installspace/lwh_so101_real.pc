@@ -1,0 +1,8 @@
+prefix=/home/a/lwh_code/soarm_ros/install
+
+Name: lwh_so101_real
+Description: Description of lwh_so101_real
+Version: 0.0.1
+Cflags: -I${prefix}/include
+Libs: -L${prefix}/lib 
+Requires: message_runtime rospy sensor_msgs std_msgs std_srvs

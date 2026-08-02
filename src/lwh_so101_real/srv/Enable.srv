@@ -1,0 +1,4 @@
+bool enable_request
+---
+bool enable_response
+string message

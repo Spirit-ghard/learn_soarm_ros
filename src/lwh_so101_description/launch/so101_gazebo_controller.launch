@@ -1,0 +1,27 @@
+<launch>
+  <arg name="use_joint_states_ctrl" default="true"/>
+
+  <rosparam file="$(find lwh_so101_description)/config/so101_gazebo_control.yaml" command="load"/>
+
+  <node
+    name="controller_spawner"
+    pkg="controller_manager"
+    type="spawner"
+    respawn="false"
+    output="screen"
+    ns="/gazebo"
+    args="joint_state_controller
+          shoulder_pan_position_controller
+          shoulder_lift_position_controller
+          elbow_flex_position_controller
+          wrist_flex_position_controller
+          wrist_roll_position_controller
+          gripper_position_controller"/>
+
+  <node
+    name="so101_joint_states_ctrl"
+    pkg="lwh_so101_description"
+    type="joint_states_ctrl.py"
+    output="screen"
+    if="$(arg use_joint_states_ctrl)"/>
+</launch>

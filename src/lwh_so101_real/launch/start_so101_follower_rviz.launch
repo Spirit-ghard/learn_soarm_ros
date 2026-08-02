@@ -1,0 +1,26 @@
+<launch>
+  <arg name="port" default="/dev/ttyACM0"/>
+  <arg name="robot_id" default="my_awesome_follower_arm"/>
+  <arg name="calibration_dir" default="/home/a/.cache/huggingface/lerobot/calibration/robots/so101_follower"/>
+  <arg name="read_only" default="true"/>
+  <arg name="auto_enable" default="false"/>
+  <arg name="auto_port" default="false"/>
+  <arg name="allow_disconnected" default="true"/>
+
+  <param name="robot_description" textfile="$(find lwh_so101_description)/urdf/so101.urdf"/>
+
+  <include file="$(find lwh_so101_real)/launch/start_so101_follower.launch">
+    <arg name="port" value="$(arg port)"/>
+    <arg name="robot_id" value="$(arg robot_id)"/>
+    <arg name="calibration_dir" value="$(arg calibration_dir)"/>
+    <arg name="read_only" value="$(arg read_only)"/>
+    <arg name="auto_enable" value="$(arg auto_enable)"/>
+    <arg name="auto_port" value="$(arg auto_port)"/>
+    <arg name="allow_disconnected" value="$(arg allow_disconnected)"/>
+  </include>
+
+  <node name="robot_state_publisher" pkg="robot_state_publisher" type="robot_state_publisher" output="screen"/>
+  <node name="rviz" pkg="rviz" type="rviz" args="-d $(find lwh_so101_description)/rviz/so101.rviz" output="screen"/>
+
+  <node name="joint_state_mux" pkg="topic_tools" type="relay" args="/joint_states_single /joint_states" output="screen"/>
+</launch>

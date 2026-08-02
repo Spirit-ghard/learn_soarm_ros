@@ -1,0 +1,34 @@
+<launch>
+  <arg name="paused" default="false"/>
+  <arg name="use_sim_time" default="true"/>
+  <arg name="gui" default="true"/>
+  <arg name="headless" default="false"/>
+  <arg name="debug" default="false"/>
+  <arg name="rviz" default="true"/>
+  <arg name="rviz_config" default="$(find lwh_so101_description)/rviz/so101_control.rviz"/>
+
+  <include file="$(find lwh_so101_description)/launch/so101_gazebo.launch">
+    <arg name="paused" value="$(arg paused)"/>
+    <arg name="use_sim_time" value="$(arg use_sim_time)"/>
+    <arg name="gui" value="$(arg gui)"/>
+    <arg name="headless" value="$(arg headless)"/>
+    <arg name="debug" value="$(arg debug)"/>
+    <arg name="use_joint_states_ctrl" value="true"/>
+  </include>
+
+  <group if="$(arg rviz)">
+    <node
+      name="joint_state_publisher_gui"
+      pkg="joint_state_publisher_gui"
+      type="joint_state_publisher_gui"/>
+    <node
+      name="robot_state_publisher"
+      pkg="robot_state_publisher"
+      type="robot_state_publisher"/>
+    <node
+      name="rviz"
+      pkg="rviz"
+      type="rviz"
+      args="-d $(arg rviz_config)"/>
+  </group>
+</launch>

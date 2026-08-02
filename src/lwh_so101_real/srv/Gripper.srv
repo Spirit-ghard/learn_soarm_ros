@@ -1,0 +1,4 @@
+float64 gripper_position
+---
+bool status
+string message

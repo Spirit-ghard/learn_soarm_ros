@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<robot xmlns:xacro="http://www.ros.org/wiki/xacro" name="so101">
+  <xacro:arg name="robot_param" default="/robot_description"/>
+  <xacro:include filename="$(find lwh_so101_description)/urdf/so101_gazebo.urdf"/>
+
+  <link name="world"/>
+
+  <joint name="fixed_base_joint" type="fixed">
+    <origin xyz="0 0 0" rpy="0 0 0"/>
+    <parent link="world"/>
+    <child link="dummy_link"/>
+  </joint>
+
+  <gazebo>
+    <plugin name="gazebo_ros_control" filename="libgazebo_ros_control.so">
+      <robotNamespace>/gazebo</robotNamespace>
+      <robotParam>$(arg robot_param)</robotParam>
+      <legacyModeNS>true</legacyModeNS>
+    </plugin>
+  </gazebo>
+</robot>

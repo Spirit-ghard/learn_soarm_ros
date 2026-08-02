@@ -1,0 +1,34 @@
+<launch>
+  <arg name="paused" default="false"/>
+  <arg name="use_sim_time" default="true"/>
+  <arg name="gui" default="true"/>
+  <arg name="headless" default="false"/>
+  <arg name="debug" default="false"/>
+  <arg name="robot_description_param" default="/robot_description"/>
+
+  <env name="GAZEBO_MODEL_DATABASE_URI" value=""/>
+  <env name="IGN_FUEL_CONFIG_PATH" value="$(find lwh_so101_description)/config/ign_fuel_empty.yaml"/>
+
+  <include file="$(find gazebo_ros)/launch/empty_world.launch">
+    <arg name="world_name" value="worlds/empty.world"/>
+    <arg name="debug" value="$(arg debug)"/>
+    <arg name="gui" value="$(arg gui)"/>
+    <arg name="paused" value="$(arg paused)"/>
+    <arg name="use_sim_time" value="$(arg use_sim_time)"/>
+    <arg name="headless" value="$(arg headless)"/>
+  </include>
+
+  <param
+    name="$(arg robot_description_param)"
+    command="$(find xacro)/xacro --inorder '$(find lwh_so101_description)/urdf/so101_gazebo_control.xacro' robot_param:=$(arg robot_description_param)"/>
+
+  <node
+    name="so101_robust_spawner"
+    pkg="lwh_so101_description"
+    type="spawn_so101_model.py"
+    respawn="false"
+    output="screen">
+    <param name="model_name" value="so101"/>
+    <param name="robot_description_param" value="$(arg robot_description_param)"/>
+  </node>
+</launch>
