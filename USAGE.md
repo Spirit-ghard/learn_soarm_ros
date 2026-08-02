@@ -1,5 +1,51 @@
 # SO101 ROS1 仿真使用说明
+--------
+• 我刚检查了：
 
+  /home/a/lwh_code/soarm_ros
+
+  这个目录还不是 Git 仓库，所以要从初始化开始。
+
+  你的远端仓库地址是：
+
+  https://github.com/haozhuzhuzhu/soarm_ros.git
+
+  建议这样做，先不要把 ROS 编译产物 build/、devel/ 推上去：
+
+  cd /home/a/lwh_code/soarm_ros
+
+  git init
+
+  cat > .gitignore <<'EOF'
+  build/
+  devel/
+  install/
+  log/
+  .catkin_tools/
+  *.pyc
+  __pycache__/
+  EOF
+
+  git add .
+  git commit -m "Initial commit"
+
+  git branch -M main
+  git remote add origin https://github.com/haozhuzhuzhu/soarm_ros.git
+  git push -u origin main
+
+  如果 git push 的时候让你登录，GitHub 现在不能用账号密码，需要用 GitHub Token，
+  或者先登录 GitHub CLI：
+
+  gh auth login
+
+  然后再执行：
+
+  git push -u origin main
+
+  你现在本机的 Git 提交身份已经有了，但 GitHub 推送认证还没完全配好，所以最可能
+  卡在最后一步 git push。
+
+--------
 这个工作空间已经写入 `~/.bashrc`，新开终端后默认可以直接使用：
 
 ```bash
