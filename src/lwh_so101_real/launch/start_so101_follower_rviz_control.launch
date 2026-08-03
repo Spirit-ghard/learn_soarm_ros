@@ -6,15 +6,29 @@
   <arg name="auto_enable" default="false"/>
   <arg name="auto_port" default="false"/>
   <arg name="allow_disconnected" default="true"/>
-  <include file="$(find lwh_so101_real)/launch/start_so101_follower_rviz.launch">
-    <arg name="port" value="$(arg port)"/>
-    <arg name="robot_id" value="$(arg robot_id)"/>
-    <arg name="calibration_dir" value="$(arg calibration_dir)"/>
-    <arg name="read_only" value="$(arg read_only)"/>
-    <arg name="auto_enable" value="$(arg auto_enable)"/>
-    <arg name="auto_port" value="$(arg auto_port)"/>
-    <arg name="allow_disconnected" value="$(arg allow_disconnected)"/>
-  </include>
+  <arg name="publish_rate" default="50.0"/>
+  <arg name="max_relative_target_deg" default="10.0"/>
+  <arg name="max_relative_target_gripper" default="15.0"/>
+  <arg name="disable_torque_on_shutdown" default="false"/>
 
+  <param name="robot_description" textfile="$(find lwh_so101_description)/urdf/so101.urdf"/>
+
+  <node name="so101_ctrl_single_node" pkg="lwh_so101_real" type="so101_ctrl_single_node.py" output="screen">
+    <param name="port" value="$(arg port)"/>
+    <param name="robot_id" value="$(arg robot_id)"/>
+    <param name="calibration_dir" value="$(arg calibration_dir)"/>
+    <param name="read_only" value="$(arg read_only)"/>
+    <param name="auto_enable" value="$(arg auto_enable)"/>
+    <param name="auto_port" value="$(arg auto_port)"/>
+    <param name="allow_disconnected" value="$(arg allow_disconnected)"/>
+    <param name="publish_rate" value="$(arg publish_rate)"/>
+    <param name="max_relative_target_deg" value="$(arg max_relative_target_deg)"/>
+    <param name="max_relative_target_gripper" value="$(arg max_relative_target_gripper)"/>
+    <param name="disable_torque_on_shutdown" value="$(arg disable_torque_on_shutdown)"/>
+  </node>
+
+  <node name="robot_state_publisher" pkg="robot_state_publisher" type="robot_state_publisher" output="screen"/>
+  <node name="joint_state_mux" pkg="topic_tools" type="relay" args="/joint_states_single /joint_states" output="screen"/>
+  <node name="rviz" pkg="rviz" type="rviz" args="-d $(find lwh_so101_description)/rviz/so101.rviz" output="screen"/>
   <node name="so101_relative_control_gui" pkg="lwh_so101_real" type="so101_relative_control_gui.py" output="screen"/>
 </launch>

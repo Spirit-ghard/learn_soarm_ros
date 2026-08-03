@@ -104,7 +104,6 @@ endif()
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/lwh_so101_real" TYPE PROGRAM FILES
     "/home/a/lwh_code/soarm_ros/src/lwh_so101_real/scripts/so101_ctrl_single_node.py"
-    "/home/a/lwh_code/soarm_ros/src/lwh_so101_real/scripts/so101_gazebo_target_bridge.py"
     "/home/a/lwh_code/soarm_ros/src/lwh_so101_real/scripts/so101_relative_control_gui.py"
     )
 endif()

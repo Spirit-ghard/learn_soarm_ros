@@ -58,17 +58,7 @@ if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/lwh_so101_description" TYPE PROGRAM FILES "/home/a/lwh_code/soarm_ros/build/lwh_so101_description/catkin_generated/installspace/joint_states_ctrl.py")
-endif()
-
-if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/lwh_so101_description" TYPE PROGRAM FILES "/home/a/lwh_code/soarm_ros/build/lwh_so101_description/catkin_generated/installspace/spawn_so101_model.py")
-endif()
-
-if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/lwh_so101_description" TYPE DIRECTORY FILES
-    "/home/a/lwh_code/soarm_ros/src/lwh_so101_description/config"
-    "/home/a/lwh_code/soarm_ros/src/lwh_so101_description/launch"
     "/home/a/lwh_code/soarm_ros/src/lwh_so101_description/meshes"
     "/home/a/lwh_code/soarm_ros/src/lwh_so101_description/rviz"
     "/home/a/lwh_code/soarm_ros/src/lwh_so101_description/urdf"

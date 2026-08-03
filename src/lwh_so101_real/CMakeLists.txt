@@ -32,7 +32,6 @@ catkin_package(
 
 install(PROGRAMS
   scripts/so101_ctrl_single_node.py
-  scripts/so101_gazebo_target_bridge.py
   scripts/so101_relative_control_gui.py
   DESTINATION ${CATKIN_PACKAGE_BIN_DESTINATION}
 )

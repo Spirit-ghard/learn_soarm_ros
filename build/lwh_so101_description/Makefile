@@ -172,214 +172,18 @@ depend:
 .PHONY : depend
 
 # Convenience name for target.
-lwh_so101_description/CMakeFiles/sensor_msgs_generate_messages_cpp.dir/rule:
-	cd /home/a/lwh_code/soarm_ros/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 lwh_so101_description/CMakeFiles/sensor_msgs_generate_messages_cpp.dir/rule
-.PHONY : lwh_so101_description/CMakeFiles/sensor_msgs_generate_messages_cpp.dir/rule
+lwh_so101_description/CMakeFiles/_catkin_empty_exported_target.dir/rule:
+	cd /home/a/lwh_code/soarm_ros/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 lwh_so101_description/CMakeFiles/_catkin_empty_exported_target.dir/rule
+.PHONY : lwh_so101_description/CMakeFiles/_catkin_empty_exported_target.dir/rule
 
 # Convenience name for target.
-sensor_msgs_generate_messages_cpp: lwh_so101_description/CMakeFiles/sensor_msgs_generate_messages_cpp.dir/rule
-.PHONY : sensor_msgs_generate_messages_cpp
+_catkin_empty_exported_target: lwh_so101_description/CMakeFiles/_catkin_empty_exported_target.dir/rule
+.PHONY : _catkin_empty_exported_target
 
 # fast build rule for target.
-sensor_msgs_generate_messages_cpp/fast:
-	cd /home/a/lwh_code/soarm_ros/build && $(MAKE) $(MAKESILENT) -f lwh_so101_description/CMakeFiles/sensor_msgs_generate_messages_cpp.dir/build.make lwh_so101_description/CMakeFiles/sensor_msgs_generate_messages_cpp.dir/build
-.PHONY : sensor_msgs_generate_messages_cpp/fast
-
-# Convenience name for target.
-lwh_so101_description/CMakeFiles/sensor_msgs_generate_messages_eus.dir/rule:
-	cd /home/a/lwh_code/soarm_ros/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 lwh_so101_description/CMakeFiles/sensor_msgs_generate_messages_eus.dir/rule
-.PHONY : lwh_so101_description/CMakeFiles/sensor_msgs_generate_messages_eus.dir/rule
-
-# Convenience name for target.
-sensor_msgs_generate_messages_eus: lwh_so101_description/CMakeFiles/sensor_msgs_generate_messages_eus.dir/rule
-.PHONY : sensor_msgs_generate_messages_eus
-
-# fast build rule for target.
-sensor_msgs_generate_messages_eus/fast:
-	cd /home/a/lwh_code/soarm_ros/build && $(MAKE) $(MAKESILENT) -f lwh_so101_description/CMakeFiles/sensor_msgs_generate_messages_eus.dir/build.make lwh_so101_description/CMakeFiles/sensor_msgs_generate_messages_eus.dir/build
-.PHONY : sensor_msgs_generate_messages_eus/fast
-
-# Convenience name for target.
-lwh_so101_description/CMakeFiles/sensor_msgs_generate_messages_lisp.dir/rule:
-	cd /home/a/lwh_code/soarm_ros/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 lwh_so101_description/CMakeFiles/sensor_msgs_generate_messages_lisp.dir/rule
-.PHONY : lwh_so101_description/CMakeFiles/sensor_msgs_generate_messages_lisp.dir/rule
-
-# Convenience name for target.
-sensor_msgs_generate_messages_lisp: lwh_so101_description/CMakeFiles/sensor_msgs_generate_messages_lisp.dir/rule
-.PHONY : sensor_msgs_generate_messages_lisp
-
-# fast build rule for target.
-sensor_msgs_generate_messages_lisp/fast:
-	cd /home/a/lwh_code/soarm_ros/build && $(MAKE) $(MAKESILENT) -f lwh_so101_description/CMakeFiles/sensor_msgs_generate_messages_lisp.dir/build.make lwh_so101_description/CMakeFiles/sensor_msgs_generate_messages_lisp.dir/build
-.PHONY : sensor_msgs_generate_messages_lisp/fast
-
-# Convenience name for target.
-lwh_so101_description/CMakeFiles/sensor_msgs_generate_messages_nodejs.dir/rule:
-	cd /home/a/lwh_code/soarm_ros/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 lwh_so101_description/CMakeFiles/sensor_msgs_generate_messages_nodejs.dir/rule
-.PHONY : lwh_so101_description/CMakeFiles/sensor_msgs_generate_messages_nodejs.dir/rule
-
-# Convenience name for target.
-sensor_msgs_generate_messages_nodejs: lwh_so101_description/CMakeFiles/sensor_msgs_generate_messages_nodejs.dir/rule
-.PHONY : sensor_msgs_generate_messages_nodejs
-
-# fast build rule for target.
-sensor_msgs_generate_messages_nodejs/fast:
-	cd /home/a/lwh_code/soarm_ros/build && $(MAKE) $(MAKESILENT) -f lwh_so101_description/CMakeFiles/sensor_msgs_generate_messages_nodejs.dir/build.make lwh_so101_description/CMakeFiles/sensor_msgs_generate_messages_nodejs.dir/build
-.PHONY : sensor_msgs_generate_messages_nodejs/fast
-
-# Convenience name for target.
-lwh_so101_description/CMakeFiles/sensor_msgs_generate_messages_py.dir/rule:
-	cd /home/a/lwh_code/soarm_ros/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 lwh_so101_description/CMakeFiles/sensor_msgs_generate_messages_py.dir/rule
-.PHONY : lwh_so101_description/CMakeFiles/sensor_msgs_generate_messages_py.dir/rule
-
-# Convenience name for target.
-sensor_msgs_generate_messages_py: lwh_so101_description/CMakeFiles/sensor_msgs_generate_messages_py.dir/rule
-.PHONY : sensor_msgs_generate_messages_py
-
-# fast build rule for target.
-sensor_msgs_generate_messages_py/fast:
-	cd /home/a/lwh_code/soarm_ros/build && $(MAKE) $(MAKESILENT) -f lwh_so101_description/CMakeFiles/sensor_msgs_generate_messages_py.dir/build.make lwh_so101_description/CMakeFiles/sensor_msgs_generate_messages_py.dir/build
-.PHONY : sensor_msgs_generate_messages_py/fast
-
-# Convenience name for target.
-lwh_so101_description/CMakeFiles/geometry_msgs_generate_messages_cpp.dir/rule:
-	cd /home/a/lwh_code/soarm_ros/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 lwh_so101_description/CMakeFiles/geometry_msgs_generate_messages_cpp.dir/rule
-.PHONY : lwh_so101_description/CMakeFiles/geometry_msgs_generate_messages_cpp.dir/rule
-
-# Convenience name for target.
-geometry_msgs_generate_messages_cpp: lwh_so101_description/CMakeFiles/geometry_msgs_generate_messages_cpp.dir/rule
-.PHONY : geometry_msgs_generate_messages_cpp
-
-# fast build rule for target.
-geometry_msgs_generate_messages_cpp/fast:
-	cd /home/a/lwh_code/soarm_ros/build && $(MAKE) $(MAKESILENT) -f lwh_so101_description/CMakeFiles/geometry_msgs_generate_messages_cpp.dir/build.make lwh_so101_description/CMakeFiles/geometry_msgs_generate_messages_cpp.dir/build
-.PHONY : geometry_msgs_generate_messages_cpp/fast
-
-# Convenience name for target.
-lwh_so101_description/CMakeFiles/geometry_msgs_generate_messages_eus.dir/rule:
-	cd /home/a/lwh_code/soarm_ros/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 lwh_so101_description/CMakeFiles/geometry_msgs_generate_messages_eus.dir/rule
-.PHONY : lwh_so101_description/CMakeFiles/geometry_msgs_generate_messages_eus.dir/rule
-
-# Convenience name for target.
-geometry_msgs_generate_messages_eus: lwh_so101_description/CMakeFiles/geometry_msgs_generate_messages_eus.dir/rule
-.PHONY : geometry_msgs_generate_messages_eus
-
-# fast build rule for target.
-geometry_msgs_generate_messages_eus/fast:
-	cd /home/a/lwh_code/soarm_ros/build && $(MAKE) $(MAKESILENT) -f lwh_so101_description/CMakeFiles/geometry_msgs_generate_messages_eus.dir/build.make lwh_so101_description/CMakeFiles/geometry_msgs_generate_messages_eus.dir/build
-.PHONY : geometry_msgs_generate_messages_eus/fast
-
-# Convenience name for target.
-lwh_so101_description/CMakeFiles/geometry_msgs_generate_messages_lisp.dir/rule:
-	cd /home/a/lwh_code/soarm_ros/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 lwh_so101_description/CMakeFiles/geometry_msgs_generate_messages_lisp.dir/rule
-.PHONY : lwh_so101_description/CMakeFiles/geometry_msgs_generate_messages_lisp.dir/rule
-
-# Convenience name for target.
-geometry_msgs_generate_messages_lisp: lwh_so101_description/CMakeFiles/geometry_msgs_generate_messages_lisp.dir/rule
-.PHONY : geometry_msgs_generate_messages_lisp
-
-# fast build rule for target.
-geometry_msgs_generate_messages_lisp/fast:
-	cd /home/a/lwh_code/soarm_ros/build && $(MAKE) $(MAKESILENT) -f lwh_so101_description/CMakeFiles/geometry_msgs_generate_messages_lisp.dir/build.make lwh_so101_description/CMakeFiles/geometry_msgs_generate_messages_lisp.dir/build
-.PHONY : geometry_msgs_generate_messages_lisp/fast
-
-# Convenience name for target.
-lwh_so101_description/CMakeFiles/geometry_msgs_generate_messages_nodejs.dir/rule:
-	cd /home/a/lwh_code/soarm_ros/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 lwh_so101_description/CMakeFiles/geometry_msgs_generate_messages_nodejs.dir/rule
-.PHONY : lwh_so101_description/CMakeFiles/geometry_msgs_generate_messages_nodejs.dir/rule
-
-# Convenience name for target.
-geometry_msgs_generate_messages_nodejs: lwh_so101_description/CMakeFiles/geometry_msgs_generate_messages_nodejs.dir/rule
-.PHONY : geometry_msgs_generate_messages_nodejs
-
-# fast build rule for target.
-geometry_msgs_generate_messages_nodejs/fast:
-	cd /home/a/lwh_code/soarm_ros/build && $(MAKE) $(MAKESILENT) -f lwh_so101_description/CMakeFiles/geometry_msgs_generate_messages_nodejs.dir/build.make lwh_so101_description/CMakeFiles/geometry_msgs_generate_messages_nodejs.dir/build
-.PHONY : geometry_msgs_generate_messages_nodejs/fast
-
-# Convenience name for target.
-lwh_so101_description/CMakeFiles/geometry_msgs_generate_messages_py.dir/rule:
-	cd /home/a/lwh_code/soarm_ros/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 lwh_so101_description/CMakeFiles/geometry_msgs_generate_messages_py.dir/rule
-.PHONY : lwh_so101_description/CMakeFiles/geometry_msgs_generate_messages_py.dir/rule
-
-# Convenience name for target.
-geometry_msgs_generate_messages_py: lwh_so101_description/CMakeFiles/geometry_msgs_generate_messages_py.dir/rule
-.PHONY : geometry_msgs_generate_messages_py
-
-# fast build rule for target.
-geometry_msgs_generate_messages_py/fast:
-	cd /home/a/lwh_code/soarm_ros/build && $(MAKE) $(MAKESILENT) -f lwh_so101_description/CMakeFiles/geometry_msgs_generate_messages_py.dir/build.make lwh_so101_description/CMakeFiles/geometry_msgs_generate_messages_py.dir/build
-.PHONY : geometry_msgs_generate_messages_py/fast
-
-# Convenience name for target.
-lwh_so101_description/CMakeFiles/std_msgs_generate_messages_cpp.dir/rule:
-	cd /home/a/lwh_code/soarm_ros/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 lwh_so101_description/CMakeFiles/std_msgs_generate_messages_cpp.dir/rule
-.PHONY : lwh_so101_description/CMakeFiles/std_msgs_generate_messages_cpp.dir/rule
-
-# Convenience name for target.
-std_msgs_generate_messages_cpp: lwh_so101_description/CMakeFiles/std_msgs_generate_messages_cpp.dir/rule
-.PHONY : std_msgs_generate_messages_cpp
-
-# fast build rule for target.
-std_msgs_generate_messages_cpp/fast:
-	cd /home/a/lwh_code/soarm_ros/build && $(MAKE) $(MAKESILENT) -f lwh_so101_description/CMakeFiles/std_msgs_generate_messages_cpp.dir/build.make lwh_so101_description/CMakeFiles/std_msgs_generate_messages_cpp.dir/build
-.PHONY : std_msgs_generate_messages_cpp/fast
-
-# Convenience name for target.
-lwh_so101_description/CMakeFiles/std_msgs_generate_messages_eus.dir/rule:
-	cd /home/a/lwh_code/soarm_ros/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 lwh_so101_description/CMakeFiles/std_msgs_generate_messages_eus.dir/rule
-.PHONY : lwh_so101_description/CMakeFiles/std_msgs_generate_messages_eus.dir/rule
-
-# Convenience name for target.
-std_msgs_generate_messages_eus: lwh_so101_description/CMakeFiles/std_msgs_generate_messages_eus.dir/rule
-.PHONY : std_msgs_generate_messages_eus
-
-# fast build rule for target.
-std_msgs_generate_messages_eus/fast:
-	cd /home/a/lwh_code/soarm_ros/build && $(MAKE) $(MAKESILENT) -f lwh_so101_description/CMakeFiles/std_msgs_generate_messages_eus.dir/build.make lwh_so101_description/CMakeFiles/std_msgs_generate_messages_eus.dir/build
-.PHONY : std_msgs_generate_messages_eus/fast
-
-# Convenience name for target.
-lwh_so101_description/CMakeFiles/std_msgs_generate_messages_lisp.dir/rule:
-	cd /home/a/lwh_code/soarm_ros/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 lwh_so101_description/CMakeFiles/std_msgs_generate_messages_lisp.dir/rule
-.PHONY : lwh_so101_description/CMakeFiles/std_msgs_generate_messages_lisp.dir/rule
-
-# Convenience name for target.
-std_msgs_generate_messages_lisp: lwh_so101_description/CMakeFiles/std_msgs_generate_messages_lisp.dir/rule
-.PHONY : std_msgs_generate_messages_lisp
-
-# fast build rule for target.
-std_msgs_generate_messages_lisp/fast:
-	cd /home/a/lwh_code/soarm_ros/build && $(MAKE) $(MAKESILENT) -f lwh_so101_description/CMakeFiles/std_msgs_generate_messages_lisp.dir/build.make lwh_so101_description/CMakeFiles/std_msgs_generate_messages_lisp.dir/build
-.PHONY : std_msgs_generate_messages_lisp/fast
-
-# Convenience name for target.
-lwh_so101_description/CMakeFiles/std_msgs_generate_messages_nodejs.dir/rule:
-	cd /home/a/lwh_code/soarm_ros/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 lwh_so101_description/CMakeFiles/std_msgs_generate_messages_nodejs.dir/rule
-.PHONY : lwh_so101_description/CMakeFiles/std_msgs_generate_messages_nodejs.dir/rule
-
-# Convenience name for target.
-std_msgs_generate_messages_nodejs: lwh_so101_description/CMakeFiles/std_msgs_generate_messages_nodejs.dir/rule
-.PHONY : std_msgs_generate_messages_nodejs
-
-# fast build rule for target.
-std_msgs_generate_messages_nodejs/fast:
-	cd /home/a/lwh_code/soarm_ros/build && $(MAKE) $(MAKESILENT) -f lwh_so101_description/CMakeFiles/std_msgs_generate_messages_nodejs.dir/build.make lwh_so101_description/CMakeFiles/std_msgs_generate_messages_nodejs.dir/build
-.PHONY : std_msgs_generate_messages_nodejs/fast
-
-# Convenience name for target.
-lwh_so101_description/CMakeFiles/std_msgs_generate_messages_py.dir/rule:
-	cd /home/a/lwh_code/soarm_ros/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 lwh_so101_description/CMakeFiles/std_msgs_generate_messages_py.dir/rule
-.PHONY : lwh_so101_description/CMakeFiles/std_msgs_generate_messages_py.dir/rule
-
-# Convenience name for target.
-std_msgs_generate_messages_py: lwh_so101_description/CMakeFiles/std_msgs_generate_messages_py.dir/rule
-.PHONY : std_msgs_generate_messages_py
-
-# fast build rule for target.
-std_msgs_generate_messages_py/fast:
-	cd /home/a/lwh_code/soarm_ros/build && $(MAKE) $(MAKESILENT) -f lwh_so101_description/CMakeFiles/std_msgs_generate_messages_py.dir/build.make lwh_so101_description/CMakeFiles/std_msgs_generate_messages_py.dir/build
-.PHONY : std_msgs_generate_messages_py/fast
+_catkin_empty_exported_target/fast:
+	cd /home/a/lwh_code/soarm_ros/build && $(MAKE) $(MAKESILENT) -f lwh_so101_description/CMakeFiles/_catkin_empty_exported_target.dir/build.make lwh_so101_description/CMakeFiles/_catkin_empty_exported_target.dir/build
+.PHONY : _catkin_empty_exported_target/fast
 
 # Help Target
 help:
@@ -394,21 +198,7 @@ help:
 	@echo "... list_install_components"
 	@echo "... rebuild_cache"
 	@echo "... test"
-	@echo "... geometry_msgs_generate_messages_cpp"
-	@echo "... geometry_msgs_generate_messages_eus"
-	@echo "... geometry_msgs_generate_messages_lisp"
-	@echo "... geometry_msgs_generate_messages_nodejs"
-	@echo "... geometry_msgs_generate_messages_py"
-	@echo "... sensor_msgs_generate_messages_cpp"
-	@echo "... sensor_msgs_generate_messages_eus"
-	@echo "... sensor_msgs_generate_messages_lisp"
-	@echo "... sensor_msgs_generate_messages_nodejs"
-	@echo "... sensor_msgs_generate_messages_py"
-	@echo "... std_msgs_generate_messages_cpp"
-	@echo "... std_msgs_generate_messages_eus"
-	@echo "... std_msgs_generate_messages_lisp"
-	@echo "... std_msgs_generate_messages_nodejs"
-	@echo "... std_msgs_generate_messages_py"
+	@echo "... _catkin_empty_exported_target"
 .PHONY : help
 
 

@@ -2,35 +2,12 @@
 <package format="2">
   <name>lwh_so101_description</name>
   <version>0.0.1</version>
-  <description>ROS 1 simulation description package for the SO101 arm.</description>
+  <description>ROS 1 URDF, meshes, and RViz config for the SO101 arm.</description>
 
   <maintainer email="noreply@example.com">lwh</maintainer>
   <license>Apache-2.0</license>
 
   <buildtool_depend>catkin</buildtool_depend>
 
-  <build_depend>rospy</build_depend>
-  <build_depend>gazebo_msgs</build_depend>
-  <build_depend>geometry_msgs</build_depend>
-  <build_depend>sensor_msgs</build_depend>
-  <build_depend>std_msgs</build_depend>
-
-  <exec_depend>controller_manager</exec_depend>
-  <exec_depend>gazebo_ros</exec_depend>
-  <exec_depend>gazebo_ros_control</exec_depend>
-  <exec_depend>gazebo_msgs</exec_depend>
-  <exec_depend>geometry_msgs</exec_depend>
-  <exec_depend>joint_state_controller</exec_depend>
-  <exec_depend>joint_state_publisher_gui</exec_depend>
-  <exec_depend>position_controllers</exec_depend>
-  <exec_depend>robot_state_publisher</exec_depend>
-  <exec_depend>roslaunch</exec_depend>
-  <exec_depend>rospy</exec_depend>
-  <exec_depend>rviz</exec_depend>
-  <exec_depend>sensor_msgs</exec_depend>
-  <exec_depend>std_msgs</exec_depend>
-  <exec_depend>xacro</exec_depend>
-
-  <export>
-  </export>
+  <export/>
 </package>
