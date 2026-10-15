@@ -1,0 +1,63 @@
+<launch>
+  <arg name="use_rviz" default="true"/>
+  <arg name="debug" default="false"/>
+  <arg name="fake_execution_type" default="interpolate"/>
+  <arg name="pipeline" default="ompl"/>
+
+  <param name="robot_description" textfile="$(find lwh_so101_description)/urdf/so101.urdf"/>
+  <param name="robot_description_semantic" textfile="$(find lwh_so101_moveit_config)/config/so101.srdf"/>
+
+  <group ns="robot_description_planning">
+    <rosparam command="load" file="$(find lwh_so101_moveit_config)/config/joint_limits.yaml"/>
+    <rosparam command="load" file="$(find lwh_so101_moveit_config)/config/cartesian_limits.yaml"/>
+  </group>
+
+  <group ns="robot_description_kinematics">
+    <rosparam command="load" file="$(find lwh_so101_moveit_config)/config/kinematics.yaml"/>
+  </group>
+
+  <node name="joint_state_retimestamp" pkg="lwh_so101_moveit_config" type="joint_state_retimestamp.py" output="screen">
+    <param name="input_topic" value="/move_group/fake_controller_joint_states"/>
+    <param name="output_topic" value="/so101_bag/joint_states"/>
+    <param name="frame_id" value="dummy_link"/>
+  </node>
+
+  <node name="joint_state_publisher" pkg="joint_state_publisher" type="joint_state_publisher">
+    <rosparam param="source_list">[/so101_bag/joint_states]</rosparam>
+    <param name="rate" value="100"/>
+  </node>
+
+  <node name="robot_state_publisher" pkg="robot_state_publisher" type="robot_state_publisher" output="screen"/>
+
+  <node name="virtual_joint_broadcaster" pkg="tf2_ros" type="static_transform_publisher"
+        args="0 0 0 0 0 0 world dummy_link"/>
+
+  <group ns="move_group">
+    <param name="allow_trajectory_execution" value="true"/>
+    <param name="default_planning_pipeline" value="$(arg pipeline)"/>
+    <param name="planning_plugin" value="ompl_interface/OMPLPlanner"/>
+    <param name="moveit_controller_manager" value="moveit_fake_controller_manager/MoveItFakeControllerManager"/>
+    <rosparam subst_value="true" command="load" file="$(find lwh_so101_moveit_config)/config/fake_controllers.yaml"/>
+
+    <group ns="planning_pipelines/ompl">
+      <param name="planning_plugin" value="ompl_interface/OMPLPlanner"/>
+      <param name="request_adapters" value="default_planner_request_adapters/AddTimeParameterization default_planner_request_adapters/FixWorkspaceBounds default_planner_request_adapters/FixStartStateBounds default_planner_request_adapters/FixStartStateCollision default_planner_request_adapters/FixStartStatePathConstraints"/>
+      <param name="start_state_max_bounds_error" value="0.1"/>
+      <rosparam command="load" file="$(find lwh_so101_moveit_config)/config/ompl_planning.yaml"/>
+    </group>
+
+    <param name="trajectory_execution/allowed_execution_duration_scaling" value="1.2"/>
+    <param name="trajectory_execution/allowed_goal_duration_margin" value="0.5"/>
+    <param name="trajectory_execution/allowed_start_tolerance" value="0.01"/>
+    <param name="planning_scene_monitor/publish_planning_scene" value="true"/>
+    <param name="planning_scene_monitor/publish_geometry_updates" value="true"/>
+    <param name="planning_scene_monitor/publish_state_updates" value="true"/>
+    <param name="planning_scene_monitor/publish_transforms_updates" value="true"/>
+  </group>
+
+  <node name="move_group" pkg="moveit_ros_move_group" type="move_group" output="screen"
+        args="$(eval '--debug' if arg('debug') else '')"/>
+
+  <node name="rviz" pkg="rviz" type="rviz" args="-d $(find lwh_so101_moveit_config)/launch/moveit.rviz"
+        if="$(arg use_rviz)"/>
+</launch>

@@ -486,6 +486,15 @@ gtest_main_LIB_DEPENDS:STATIC=general;gtest;
 lib:FILEPATH=/opt/ros/noetic/lib/librostime.so
 
 //Value Computed by CMake
+lwh_moveit_test_BINARY_DIR:STATIC=/home/a/lwh_code/soarm_ros/build/lwh_moveit_test
+
+//Value Computed by CMake
+lwh_moveit_test_IS_TOP_LEVEL:STATIC=OFF
+
+//Value Computed by CMake
+lwh_moveit_test_SOURCE_DIR:STATIC=/home/a/lwh_code/soarm_ros/src/lwh_moveit_test
+
+//Value Computed by CMake
 lwh_so101_description_BINARY_DIR:STATIC=/home/a/lwh_code/soarm_ros/build/lwh_so101_description
 
 //Value Computed by CMake
@@ -493,6 +502,15 @@ lwh_so101_description_IS_TOP_LEVEL:STATIC=OFF
 
 //Value Computed by CMake
 lwh_so101_description_SOURCE_DIR:STATIC=/home/a/lwh_code/soarm_ros/src/lwh_so101_description
+
+//Value Computed by CMake
+lwh_so101_moveit_config_BINARY_DIR:STATIC=/home/a/lwh_code/soarm_ros/build/lwh_so101_moveit_config
+
+//Value Computed by CMake
+lwh_so101_moveit_config_IS_TOP_LEVEL:STATIC=OFF
+
+//Value Computed by CMake
+lwh_so101_moveit_config_SOURCE_DIR:STATIC=/home/a/lwh_code/soarm_ros/src/lwh_so101_moveit_config
 
 //Value Computed by CMake
 lwh_so101_real_BINARY_DIR:STATIC=/home/a/lwh_code/soarm_ros/build/lwh_so101_real
@@ -680,7 +698,7 @@ CMAKE_MODULE_LINKER_FLAGS_RELWITHDEBINFO-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_NM
 CMAKE_NM-ADVANCED:INTERNAL=1
 //number of local generators
-CMAKE_NUMBER_OF_MAKEFILES:INTERNAL=6
+CMAKE_NUMBER_OF_MAKEFILES:INTERNAL=8
 //ADVANCED property for variable: CMAKE_OBJCOPY
 CMAKE_OBJCOPY-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_OBJDUMP

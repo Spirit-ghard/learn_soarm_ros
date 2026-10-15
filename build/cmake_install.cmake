@@ -151,7 +151,9 @@ endif()
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for each subdirectory.
   include("/home/a/lwh_code/soarm_ros/build/gtest/cmake_install.cmake")
+  include("/home/a/lwh_code/soarm_ros/build/lwh_moveit_test/cmake_install.cmake")
   include("/home/a/lwh_code/soarm_ros/build/lwh_so101_description/cmake_install.cmake")
+  include("/home/a/lwh_code/soarm_ros/build/lwh_so101_moveit_config/cmake_install.cmake")
   include("/home/a/lwh_code/soarm_ros/build/lwh_so101_real/cmake_install.cmake")
 
 endif()

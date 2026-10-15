@@ -1,0 +1,20 @@
+planner_configs:
+  RRTConnect:
+    type: geometric::RRTConnect
+    range: 0.0
+  RRTstar:
+    type: geometric::RRTstar
+    range: 0.0
+    goal_bias: 0.05
+arm:
+  planner_configs:
+    - RRTConnect
+    - RRTstar
+  projection_evaluator: joints(shoulder_pan,shoulder_lift)
+  longest_valid_segment_fraction: 0.01
+so101:
+  planner_configs:
+    - RRTConnect
+    - RRTstar
+  projection_evaluator: joints(shoulder_pan,shoulder_lift)
+  longest_valid_segment_fraction: 0.01

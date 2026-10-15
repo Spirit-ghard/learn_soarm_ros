@@ -1,0 +1,8 @@
+prefix=/home/a/lwh_code/soarm_ros/install
+
+Name: lwh_moveit_test
+Description: Description of lwh_moveit_test
+Version: 0.3.0
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: 

@@ -1,2 +1,2 @@
-lwh_so101_description:lwh_so101_real
--DCATKIN_DEVEL_PREFIX=/home/a/lwh_code/soarm_ros/devel -DCMAKE_INSTALL_PREFIX=/home/a/lwh_code/soarm_ros/install -G Unix Makefiles
+lwh_moveit_test:lwh_so101_description:lwh_so101_moveit_config:lwh_so101_real
+-DCATKIN_DEVEL_PREFIX=/home/a/lwh_code/learn_soarm_ros/devel -DCMAKE_INSTALL_PREFIX=/home/a/lwh_code/learn_soarm_ros/install -G Unix Makefiles

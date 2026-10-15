@@ -171,20 +171,6 @@ depend:
 	cd /home/a/lwh_code/soarm_ros/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
 
-# Convenience name for target.
-lwh_so101_description/CMakeFiles/_catkin_empty_exported_target.dir/rule:
-	cd /home/a/lwh_code/soarm_ros/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 lwh_so101_description/CMakeFiles/_catkin_empty_exported_target.dir/rule
-.PHONY : lwh_so101_description/CMakeFiles/_catkin_empty_exported_target.dir/rule
-
-# Convenience name for target.
-_catkin_empty_exported_target: lwh_so101_description/CMakeFiles/_catkin_empty_exported_target.dir/rule
-.PHONY : _catkin_empty_exported_target
-
-# fast build rule for target.
-_catkin_empty_exported_target/fast:
-	cd /home/a/lwh_code/soarm_ros/build && $(MAKE) $(MAKESILENT) -f lwh_so101_description/CMakeFiles/_catkin_empty_exported_target.dir/build.make lwh_so101_description/CMakeFiles/_catkin_empty_exported_target.dir/build
-.PHONY : _catkin_empty_exported_target/fast
-
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -198,7 +184,6 @@ help:
 	@echo "... list_install_components"
 	@echo "... rebuild_cache"
 	@echo "... test"
-	@echo "... _catkin_empty_exported_target"
 .PHONY : help
 
 

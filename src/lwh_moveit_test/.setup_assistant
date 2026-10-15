@@ -1,0 +1,11 @@
+moveit_setup_assistant_config:
+  URDF:
+    package: lwh_so101_description
+    relative_path: urdf/so101.urdf
+    xacro_args: ""
+  SRDF:
+    relative_path: config/so101.srdf
+  CONFIG:
+    author_name: 1
+    author_email: 1@qq.com
+    generated_timestamp: 1785766992

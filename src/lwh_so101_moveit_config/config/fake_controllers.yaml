@@ -1,0 +1,24 @@
+fake_interpolating_controller_rate: 100
+controller_list:
+  - name: fake_arm_controller
+    type: $(arg fake_execution_type)
+    joints:
+      - shoulder_pan
+      - shoulder_lift
+      - elbow_flex
+      - wrist_flex
+      - wrist_roll
+  - name: fake_so101_controller
+    type: $(arg fake_execution_type)
+    joints:
+      - shoulder_pan
+      - shoulder_lift
+      - elbow_flex
+      - wrist_flex
+      - wrist_roll
+      - gripper
+initial:
+  - group: arm
+    pose: zero
+  - group: so101
+    pose: zero

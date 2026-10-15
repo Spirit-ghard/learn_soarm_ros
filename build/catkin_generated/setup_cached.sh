@@ -8,6 +8,9 @@
 
 # modified environment variables
 export CMAKE_PREFIX_PATH="/home/a/lwh_code/soarm_ros/devel:$CMAKE_PREFIX_PATH"
-export PWD='/home/a/lwh_code/soarm_ros/build'
+export LD_LIBRARY_PATH="/home/a/lwh_code/soarm_ros/devel/lib:$LD_LIBRARY_PATH"
+export PKG_CONFIG_PATH="/home/a/lwh_code/soarm_ros/devel/lib/pkgconfig:$PKG_CONFIG_PATH"
+export PWD='/home/a/lwh_code/learn_soarm_ros/build'
+export PYTHONPATH="/home/a/lwh_code/soarm_ros/devel/lib/python3/dist-packages:$PYTHONPATH"
 export ROSLISP_PACKAGE_DIRECTORIES='/home/a/lwh_code/soarm_ros/devel/share/common-lisp'
 export ROS_PACKAGE_PATH="/home/a/lwh_code/soarm_ros/src:$ROS_PACKAGE_PATH"

@@ -64,13 +64,17 @@ CMAKE_BINARY_DIR = /home/a/lwh_code/soarm_ros/build
 
 # The main recursive "all" target.
 all: gtest/all
+all: lwh_moveit_test/all
 all: lwh_so101_description/all
+all: lwh_so101_moveit_config/all
 all: lwh_so101_real/all
 .PHONY : all
 
 # The main recursive "preinstall" target.
 preinstall: gtest/preinstall
+preinstall: lwh_moveit_test/preinstall
 preinstall: lwh_so101_description/preinstall
+preinstall: lwh_so101_moveit_config/preinstall
 preinstall: lwh_so101_real/preinstall
 .PHONY : preinstall
 
@@ -81,7 +85,9 @@ clean: CMakeFiles/run_tests.dir/clean
 clean: CMakeFiles/clean_test_results.dir/clean
 clean: CMakeFiles/doxygen.dir/clean
 clean: gtest/clean
+clean: lwh_moveit_test/clean
 clean: lwh_so101_description/clean
+clean: lwh_so101_moveit_config/clean
 clean: lwh_so101_real/clean
 .PHONY : clean
 
@@ -134,6 +140,21 @@ gtest/googletest/clean: gtest/googletest/CMakeFiles/gtest_main.dir/clean
 .PHONY : gtest/googletest/clean
 
 #=============================================================================
+# Directory level rules for directory lwh_moveit_test
+
+# Recursive "all" directory target.
+lwh_moveit_test/all:
+.PHONY : lwh_moveit_test/all
+
+# Recursive "preinstall" directory target.
+lwh_moveit_test/preinstall:
+.PHONY : lwh_moveit_test/preinstall
+
+# Recursive "clean" directory target.
+lwh_moveit_test/clean: lwh_moveit_test/CMakeFiles/_catkin_empty_exported_target.dir/clean
+.PHONY : lwh_moveit_test/clean
+
+#=============================================================================
 # Directory level rules for directory lwh_so101_description
 
 # Recursive "all" directory target.
@@ -145,8 +166,23 @@ lwh_so101_description/preinstall:
 .PHONY : lwh_so101_description/preinstall
 
 # Recursive "clean" directory target.
-lwh_so101_description/clean: lwh_so101_description/CMakeFiles/_catkin_empty_exported_target.dir/clean
+lwh_so101_description/clean:
 .PHONY : lwh_so101_description/clean
+
+#=============================================================================
+# Directory level rules for directory lwh_so101_moveit_config
+
+# Recursive "all" directory target.
+lwh_so101_moveit_config/all:
+.PHONY : lwh_so101_moveit_config/all
+
+# Recursive "preinstall" directory target.
+lwh_so101_moveit_config/preinstall:
+.PHONY : lwh_so101_moveit_config/preinstall
+
+# Recursive "clean" directory target.
+lwh_so101_moveit_config/clean:
+.PHONY : lwh_so101_moveit_config/clean
 
 #=============================================================================
 # Directory level rules for directory lwh_so101_real
@@ -433,30 +469,30 @@ gtest/googletest/CMakeFiles/gtest_main.dir/clean:
 .PHONY : gtest/googletest/CMakeFiles/gtest_main.dir/clean
 
 #=============================================================================
-# Target rules for target lwh_so101_description/CMakeFiles/_catkin_empty_exported_target.dir
+# Target rules for target lwh_moveit_test/CMakeFiles/_catkin_empty_exported_target.dir
 
 # All Build rule for target.
-lwh_so101_description/CMakeFiles/_catkin_empty_exported_target.dir/all:
-	$(MAKE) $(MAKESILENT) -f lwh_so101_description/CMakeFiles/_catkin_empty_exported_target.dir/build.make lwh_so101_description/CMakeFiles/_catkin_empty_exported_target.dir/depend
-	$(MAKE) $(MAKESILENT) -f lwh_so101_description/CMakeFiles/_catkin_empty_exported_target.dir/build.make lwh_so101_description/CMakeFiles/_catkin_empty_exported_target.dir/build
+lwh_moveit_test/CMakeFiles/_catkin_empty_exported_target.dir/all:
+	$(MAKE) $(MAKESILENT) -f lwh_moveit_test/CMakeFiles/_catkin_empty_exported_target.dir/build.make lwh_moveit_test/CMakeFiles/_catkin_empty_exported_target.dir/depend
+	$(MAKE) $(MAKESILENT) -f lwh_moveit_test/CMakeFiles/_catkin_empty_exported_target.dir/build.make lwh_moveit_test/CMakeFiles/_catkin_empty_exported_target.dir/build
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/a/lwh_code/soarm_ros/build/CMakeFiles --progress-num= "Built target _catkin_empty_exported_target"
-.PHONY : lwh_so101_description/CMakeFiles/_catkin_empty_exported_target.dir/all
+.PHONY : lwh_moveit_test/CMakeFiles/_catkin_empty_exported_target.dir/all
 
 # Build rule for subdir invocation for target.
-lwh_so101_description/CMakeFiles/_catkin_empty_exported_target.dir/rule: cmake_check_build_system
+lwh_moveit_test/CMakeFiles/_catkin_empty_exported_target.dir/rule: cmake_check_build_system
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/a/lwh_code/soarm_ros/build/CMakeFiles 0
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 lwh_so101_description/CMakeFiles/_catkin_empty_exported_target.dir/all
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 lwh_moveit_test/CMakeFiles/_catkin_empty_exported_target.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/a/lwh_code/soarm_ros/build/CMakeFiles 0
-.PHONY : lwh_so101_description/CMakeFiles/_catkin_empty_exported_target.dir/rule
+.PHONY : lwh_moveit_test/CMakeFiles/_catkin_empty_exported_target.dir/rule
 
 # Convenience name for target.
-_catkin_empty_exported_target: lwh_so101_description/CMakeFiles/_catkin_empty_exported_target.dir/rule
+_catkin_empty_exported_target: lwh_moveit_test/CMakeFiles/_catkin_empty_exported_target.dir/rule
 .PHONY : _catkin_empty_exported_target
 
 # clean rule for target.
-lwh_so101_description/CMakeFiles/_catkin_empty_exported_target.dir/clean:
-	$(MAKE) $(MAKESILENT) -f lwh_so101_description/CMakeFiles/_catkin_empty_exported_target.dir/build.make lwh_so101_description/CMakeFiles/_catkin_empty_exported_target.dir/clean
-.PHONY : lwh_so101_description/CMakeFiles/_catkin_empty_exported_target.dir/clean
+lwh_moveit_test/CMakeFiles/_catkin_empty_exported_target.dir/clean:
+	$(MAKE) $(MAKESILENT) -f lwh_moveit_test/CMakeFiles/_catkin_empty_exported_target.dir/build.make lwh_moveit_test/CMakeFiles/_catkin_empty_exported_target.dir/clean
+.PHONY : lwh_moveit_test/CMakeFiles/_catkin_empty_exported_target.dir/clean
 
 #=============================================================================
 # Target rules for target lwh_so101_real/CMakeFiles/sensor_msgs_generate_messages_cpp.dir
